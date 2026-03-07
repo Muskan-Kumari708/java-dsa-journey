@@ -1,18 +1,22 @@
 package Arrays;
 
 public class Second_largest {
-    public static void main(String[] args){
-        int [] a = {3,8,9,0,4,5};
-        for (int i=0;i<a.length;i++){
-            for (int j=0;j<a.length-i-1;j++){
-                if (a[j]>a[j+1]){
-                    int t = a[j+1];
-                    a[j+1] = a[j];
-                    a[j] = t;
-                }
-
+    public static int Seclargest(int [] a){
+        int largest = a[0];
+        int secondLargest = Integer.MIN_VALUE;
+        for (int i=1;i<a.length;i++){
+            if (a[i]>largest){
+                secondLargest=largest;
+                largest=a[i];
+            } else if (a[i] < largest && a[i]>secondLargest) {
+                secondLargest = a[i];
             }
         }
-        System.out.println(a[a.length-2]);
+        return secondLargest;
+    }
+    public static void main(String[] args){
+        int [] a = {3,8,0,4,6};
+        System.out.println(Seclargest(a));
     }
 }
+
