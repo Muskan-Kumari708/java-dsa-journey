@@ -1,34 +1,26 @@
 package Arrays;
 
 public class first_repeating {
+    public static int repeating(int [] a){
+        for (int i=0;i<a.length;i++) {
+
+            for (int j = i+1; j < a.length; j++) {
+                if (a[i] == a[j]) {
+                  return a[i];
+
+                }
+
+            }
+        }
+        return -1;
+
+    }
     public static void main(String[] args){
-        int [] arr = {1,2,5,3,4,3,5};
-        for (int i=0;i<arr.length;i++) {
-            int j;
-            for (j = 0; j < i; j++) {
-                if (arr[i] == arr[j]) {
-                    System.out.println(arr[i]);
-                    return;
-                }
-
-            }
-        }
-
-
+        int [] a = {1,5,3,4,6,3,4};
+        System.out.println(repeating(a));
 
         }
 
-        public static class First_Last_Elements {
-            public static void main(String[] args){
-                int [] array = {5,9,0,8,3,4,17};
-                for (int i=0;i< array.length;i++){
-                    if (array[i]==array[0] || array[i]==array[array.length-1]){
-                        System.out.println(array[i]);
-                    }
-                }
-
-            }
-        }
 
 
 }
