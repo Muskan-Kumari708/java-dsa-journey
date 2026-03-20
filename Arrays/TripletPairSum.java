@@ -12,11 +12,12 @@ public class TripletPairSum {
                 }
             }
         }
+
         return count;
 
     }
     public static void main(String[] args){
-        int [] a = {1,4,5,6,3};
+        int [] a = {1,4,2,6,5};
         int target = 12;
 
         System.out.println(triplets(a,target));
