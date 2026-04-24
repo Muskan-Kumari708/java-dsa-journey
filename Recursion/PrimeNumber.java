@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class PrimeNumber {
     public static boolean prime(int n , int i){
+        // Base case
         if (n <= 1){
             return false;
         }
         if (i * i > n){
             return true;
         }
+        // Subproblem
         if (n % i == 0){
             return false;
         }
